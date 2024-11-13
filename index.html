@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>Bits & Bytes</title>
+    <script src="script.js"></script>
+</head>
+
+
+<body
+    class="glass-bkg"
+    style="
+      padding: 100px;
+      min-height: 100vh;
+      max-height: fit-content;
+      overflow: auto;
+    ">
+    <video
+    autoplay
+    muted
+    loop
+    id="background-video"
+    style="
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    "
+  >
+    <source src="src/video.mp4" type="video/mp4" />
+  </video>
+    <header>
+        <div class="glass-bkg">
+            <br>
+            <h1 class="binary-effect">Bits & Bytes</h1>
+            <br>
+        </div>
+    </header>
+    <article>
+        <div class="glass-bkg">
+            <div style="display: none" id="div_verifiedAnswer">
+                <h3>Resposta Correta</h3>
+            </div>
+            <div id="div_game" class="glass-bkg">
+                <br>
+                <div id="div_information">
+                    <h2>Intruções do Jogo</h2><br><br>
+                    <p>
+                        Clique em "Começar o Jogo" para iniciar uma partida <br><br>
+                        Perguntas serão exibidas na parte inferior do quadro <br><br>
+                        Insira a sua resposta na caixa de texto e clique em "Verificar" para conferir a sua
+                        resposta<br><br>
+                        A partida acaba quando as 16 questões forem respondidas <br><br>
+                    </p>
+                </div>
+                <br>
+                <div id="div_canvasCruzada"></div>
+                <br>
+                <div style="display: none" id="div_questions">
+                    <center>
+                        <span id="span_questionText">Vamos encontrar as esferas do dragao</span><br><br>
+                        <input type="text" id="input_answer" class="glass-btn" placeholder="Sua Reposta"><br><br>
+                        <button id="button_verify" onclick="verify()" class="glass-btn">Verificar</button>
+                    </center>
+                </div>
+                <div class="div_button" style="margin-top: 20px;">
+                    <center>
+                        <button class="glass-btn" id="bt_start" onclick="start()">Começar o Jogo</button>
+                        <button class="glass-btn" style="display: none" id="bt_destroyGame" onclick="destroyGrid()">Encerrar o
+                            Jogo</button>
+                    </center>
+                </div>
+            </div>
+        </div>
+        </div>
+    </article>
+    <footer>
+        <div class="glass-bkg"><br>
+            <p>Developed by Felipe Calace && Eduardo Ohata<br>
+                RA: 01242061 && 01242110 <br>
+                1ADS-B
+            </p>
+        </div>
+    </footer>
+</body>
+</html>
